@@ -15,12 +15,15 @@ RUN pwsh-preview -C set-powercliconfiguration -InvalidcertificateAction:ignore -
 
 
 #### importing modules 
-RUN pwsh-preview -C New-Item –Path '$Profile' –Type File –Force
+### ading new profile file
+#RUN pwsh-preview -C New-Item –Path '$Profile' –Type File –Force
+### Copy module into newly created profile file
 #COPY urmodule-script.ps1 /root/.config/powershell/Microsoft.PowerShell_profile.ps1
-COPY urposwershell-Powercli_scripts.ps1 /
+### copy scripts if u have any
+#COPY urposwershell-Powercli_scripts.ps1 /
 
 
-
+### it's depends on where ur remote scripts are executing removing proxy or not 
 
 #ENV http_proxy=
 #ENV https_proxy=
